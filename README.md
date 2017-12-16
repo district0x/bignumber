@@ -8,6 +8,7 @@ This library doesn't come with `cljsjs/bignumber`, because you might have bignum
 
 ### Installation
 Add `[district0x/bignumber "1.0.0"]` into your project.clj
+
 Include `[bignumber.core]` in your CLJS file.
 
 ### Docs
