@@ -11,12 +11,15 @@ Add `[district0x/bignumber "1.0.0"]` into your project.clj
 Include `[bignumber.core]` in your CLJS file.
 
 ## bignumber.core
-### bignumber? [x]
-True if number is BigNumber
-### number [x]
-toNumber
-### abs [x]
-abs
+**bignumber? [x]**  
+True if number is BigNumber  
+
+**number [x]**  
+toNumber  
+
+**abs [x]**    
+abs  
+
 ### ceil [x]
 ceil
 ### cmp [x & [base]]
@@ -81,7 +84,7 @@ toFixed
 toFormat
 ### fraction [x & [max]]
 toFraction
-##### json [x]
+### json [x]
 toJSON
 ### pow [x n & [m]]
 pow
