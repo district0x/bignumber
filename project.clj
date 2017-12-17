@@ -1,4 +1,4 @@
-(defproject district0x/bignumber "1.0.0"
+(defproject district0x/bignumber "1.0.1"
   :description "Wrapper library for bignumber.js"
   :url "https://github.com/district0x/bignumber"
   :license {:name "Eclipse Public License"

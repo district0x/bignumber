@@ -2,7 +2,9 @@
   (:refer-clojure :exclude [pos? neg? abs int? zero? - + * / mod = > >= < <=]))
 
 (defn bignumber? [x]
-  (and x (cljs.core/= (aget x "constructor" "name") "BigNumber")))
+  ; Doesn't work for web3.js, leaving it here for the future record
+  ; (and x (cljs.core/= (aget x "constructor" "name") "BigNumber"))
+  (and x (aget x "toNumber")))
 
 (defn- apply-fn [bn-fn-name native-fn x & args]
   (if (bignumber? x)

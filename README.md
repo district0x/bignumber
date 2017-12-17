@@ -7,7 +7,7 @@ On contrary to the original library, if you pass non-bignumber value into a func
 This library doesn't come with `cljsjs/bignumber`, because you might have bignumber.js included by other library, such as [web3.js](https://github.com/ethereum/web3.js/).
 
 ## Installation
-Add `[district0x/bignumber "1.0.0"]` into your project.clj  
+Add `[district0x/bignumber "1.0.1"]` into your project.clj  
 Include `[bignumber.core]` in your CLJS file.
 
 ## bignumber.core
