@@ -11,122 +11,122 @@ Add `[district0x/bignumber "1.0.0"]` into your project.clj
 Include `[bignumber.core]` in your CLJS file.
 
 ## bignumber.core
-**bignumber? [x]**  
+**`bignumber? [x]`**  
 True if number is BigNumber  
 
-**number [x]**  
+**`number [x]`**  
 toNumber  
 
-**abs [x]**    
+**`abs [x]`**    
 abs  
 
-**ceil [x]**  
+**`ceil [x]`**  
 ceil
 
-**cmp [x & [base]]**  
+**`cmp [x & [base]]`**  
 cmp (comparedTo)  
 
-**dp [x]**  
+**`dp [x]`**  
 dp (decimalPlaces)  
 
-**/ [x y & [base]]**  
+**`/ [x y & [base]]`**  
 div  
 
-**div-to-int [x y & [base]]**  
+**`div-to-int [x y & [base]]`**  
 divToInt  
 
-**= [x y & [base]]**  
+**`= [x y & [base]]`**  
 equals  
 
-**floor [x]**  
+**`floor [x]`**  
 floor  
 
-**> [x y & [base]]**  
+**`> [x y & [base]]`**  
 greaterThan  
 BigNumbers are comparable event with native operators, so you don't need to use this one.  
 
-**>= [x y & [base]]**  
+**`>= [x y & [base]]`**  
 greaterThanOrEqualTo  
 BigNumbers are comparable event with native operators, so you don't need to use this one.  
 
-**finite? [x]**    
+**`finite? [x]`**    
 isFinite  
 
-**int? [x]**  
+**`int? [x]`**  
 isInt
   
-**nan? [x]**  
+**`nan? [x]`**  
 isNaN  
 
-**neg? [x]**  
+**`neg? [x]`**  
 isNeg  
 
-**zero? [x]**  
+**`zero? [x]`**  
 isZero  
 
-**< [x y & [base]]**  
+**`< [x y & [base]]`**  
 lessThan  
 BigNumbers are comparable event with native operators, so you don't need to use this one.  
 
-**<= [x y & [base]]**  
+**`<= [x y & [base]]`**  
 lessThanOrEqualTo  
 BigNumbers are comparable event with native operators, so you don't need to use this one.  
 
-**- [x y & [base]]**  
+**`- [x y & [base]]`**  
 minus  
 
-**mod [x y & [base]]**  
+**`mod [x y & [base]]`**  
 mod  
 
-**neg [x]**  
+**`neg [x]`**  
 negated  
 
-**+ [x y & [base]]**   
+**`+ [x y & [base]]`**   
 plus  
 
-**sd [x & [z]]**  
+**`sd [x & [z]]`**  
 significantDecimals  
 
-**round [x & [dp rm]]**  
+**`round [x & [dp rm]]`**  
 round  
 
-**shift [x z]**  
+**`shift [x z]`**  
 shift  
 
-**sqrt [x]**  
+**`sqrt [x]`**  
 sqrt  
 
-**\* [x y & [base]]**
+**`\* [x y & [base]]`**
 times
 
-**digits [x & [sd rm]]**  
+**`digits [x & [sd rm]]`**  
 toDigits  
 
-**exponential [x & [dp rm]]**  
+**`exponential [x & [dp rm]]`**  
 toExponential  
 
-**fixed [x & [dp rm]]**  
+**`fixed [x & [dp rm]]`**  
 toFixed  
 
-**format [x & [dp rm]]**  
+**`format [x & [dp rm]]`**  
 toFormat  
 
-**fraction [x & [max]]**  
+**`fraction [x & [max]]`**  
 toFraction  
 
-**json [x]**  
+**`json [x]`**  
 toJSON  
 
-**pow [x n & [m]]**  
+**`pow [x n & [m]]`**  
 pow  
 
-**precision [x & [sd rm]]**  
+**`precision [x & [sd rm]]`**  
 toPrecision  
 
-**trunc [x]**  
+**`trunc [x]`**  
 trunc  
 
-**value-of [x]**  
+**`value-of [x]`**  
 valueOf  
 
 
