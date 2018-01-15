@@ -19,7 +19,7 @@
 
 
 (defn number [x]
-  (apply-fn "toNumber" identity x))
+  (apply-fn "toNumber" js/parseFloat x))
 
 
 (defn abs [x]
