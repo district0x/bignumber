@@ -12,14 +12,18 @@
     (apply native-fn x args)))
 
 
-(defn- apply-arithmentic-fn [bn-fn-name native-fn x y base]
+(defn- apply-arithmetic-fn [bn-fn-name native-fn x y base]
   (if (bignumber? x)
     (js-invoke x bn-fn-name y base)
     (native-fn x y)))
 
 
 (defn number [x]
-  (apply-fn "toNumber" js/parseFloat x))
+  (apply-fn "toNumber" (fn [x]
+                         (let [x (js/parseFloat x)]
+                           (when-not (js/isNaN x)
+                             x)))
+            x))
 
 
 (defn abs [x]
@@ -39,15 +43,15 @@
 
 
 (defn / [x y & [base]]
-  (apply-arithmentic-fn "div" cljs.core/divide x y base))
+  (apply-arithmetic-fn "div" cljs.core/divide x y base))
 
 
 (defn div-to-int [x y & [base]]
-  (apply-arithmentic-fn "divToInt" cljs.core/divide x y base))
+  (apply-arithmetic-fn "divToInt" cljs.core/divide x y base))
 
 
 (defn = [x y & [base]]
-  (apply-arithmentic-fn "eq" cljs.core/= x y base))
+  (apply-arithmetic-fn "eq" cljs.core/= x y base))
 
 
 (defn floor [x]
@@ -55,11 +59,11 @@
 
 
 (defn > [x y & [base]]
-  (apply-arithmentic-fn "gt" cljs.core/> x y base))
+  (apply-arithmetic-fn "gt" cljs.core/> x y base))
 
 
 (defn >= [x y & [base]]
-  (apply-arithmentic-fn "gte" cljs.core/>= x y base))
+  (apply-arithmetic-fn "gte" cljs.core/>= x y base))
 
 
 (defn finite? [x]
@@ -83,26 +87,26 @@
 
 
 (defn < [x y & [base]]
-  (apply-arithmentic-fn "lt" cljs.core/< x y base))
+  (apply-arithmetic-fn "lt" cljs.core/< x y base))
 
 
 (defn <= [x y & [base]]
-  (apply-arithmentic-fn "lte" cljs.core/<= x y base))
+  (apply-arithmetic-fn "lte" cljs.core/<= x y base))
 
 
 (defn - [x y & [base]]
-  (apply-arithmentic-fn "minus" cljs.core/- x y base))
+  (apply-arithmetic-fn "minus" cljs.core/- x y base))
 
 
 (defn mod [x y & [base]]
-  (apply-arithmentic-fn "mod" cljs.core/mod x y base))
+  (apply-arithmetic-fn "mod" cljs.core/mod x y base))
 
 
 (defn neg [x]
   (apply-fn "neg" cljs.core/unchecked-negate x))
 
 (defn + [x y & [base]]
-  (apply-arithmentic-fn "plus" cljs.core/+ x y base))
+  (apply-arithmetic-fn "plus" cljs.core/+ x y base))
 
 
 (defn sd [x & [z]]
@@ -124,7 +128,7 @@
 
 
 (defn * [x y & [base]]
-  (apply-arithmentic-fn "times" cljs.core/* x y base))
+  (apply-arithmetic-fn "times" cljs.core/* x y base))
 
 
 (defn digits [x & [sd rm]]
